@@ -16,17 +16,21 @@
     <div id="nav">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="/index">Home</a>
+          <a class="nav-link active" aria-current="page" href="/index">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/findroom">Find Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/listroom">List ads</a>
+          <a class="nav-link" href="/listroom">List Ads</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/profile"><b>Hello <%= loggedInUser.username %></b></a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/save">Save Ads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/profile">Hello <%= loggedInUser.username%></a>
+        </li>
+
       </ul>
     </div>
     <div id="wrap" class="container">

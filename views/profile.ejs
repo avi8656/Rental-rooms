@@ -65,7 +65,10 @@
           <a class="nav-link" href="/findroom">Find Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/listroom">List ads</a>
+          <a class="nav-link" href="/listroom">List Ads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/save">Save Ads</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="/profile">Hello <%= loggedInUser.username%></a>
@@ -74,27 +77,35 @@
       </ul>
     </div>
 
-    <div class="container mt-5 d-flex align-items-center">
+
+<!-- <div class="container mt-5 d-flex align-items-center">
       <div class="w-25">
-        <div class="mt-3" id="profile"></div>
+        <div class="mt-3" id="profile">
+          <form style="display: none;" id="uploadProfileform" action="/uploadProfile" method="post"
+            enctype="multipart/form-data">
+            <input id="profile-pic-input" type="file" name="image" />
+            <button type="submit">Upload Profile Photo</button>
+          </form>
+        </div>
         <h3 class="text fw-semibold mt-3">Hello <%= loggedInUser.username %>
         </h3>
       </div>
       <div>
         <h4 class="text fw-medium text-center w-100">Here you are using on of the best platform for you property.</h4>
-        <button class="btn btn-dark me-5 mt-5 "><a class="text-decoration-none text-white" href="/edit">Edit Profile
+        <button class="btn btn-dark me-5 mt-5 "><a class="text-decoration-none text-white" href="/">Edit Profile
             ✍️</a></button>
         <button class="btn btn-success mt-5 "><a class="text-decoration-none text-white" href="/save">Save Ads
-            ❤️</a></button>
-      </div>
-    </div>
+            ❤️</a></button></div>
+    </div> -->
+
+   
 
     <div id="ads" class="w-100 d-flex flex-wrap">
 
-
-
       <div class="left w-100 p-5 border-end border-2">
         <h3 class="fw-semibold text-center opacity-75 mb-5">Ads Posted By <%= loggedInUser.username %>.</h3>
+        
+        
         <div class="d-flex flex-wrap gap-5 ms-2">
 
           <% if(loggedInUser.posts.length>0){ %>

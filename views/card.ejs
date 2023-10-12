@@ -14,21 +14,25 @@
 <body>
   <div id="main">
     <div id="nav">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" href="/index">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/findroom">Find Rooms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/listroom">List ads</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/profile"><b>Hello <%= loggedInUser.username %></b></a>
-            </li>
-        </ul>
-    </div>  
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/findroom">Find Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listroom">List Ads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/save">Save Ads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/profile">Hello <%= loggedInUser.username%></a>
+        </li>
+
+      </ul>
+    </div>
 
     <div id="details">
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -66,7 +70,7 @@
          <h5 class="mb-3"><b>Price :</b> <%= post.price %></h5>
          <h5 class="mb-3"><b>Contact Number :</b> <%= post.number %></h5>
 
-         <button class="btn btn-success mt-4" ><a class="text-decoration-none text-black" href="/save/<%= post._id %>">Save for later 🔑</a></button>
+         <button class="btn btn-success mt-4" ><a class="text-decoration-none text-white" href="/save/<%= post._id%>">Save Ad.🔒</a></button>
        </div>
     </div>
     

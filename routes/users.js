@@ -40,7 +40,7 @@ var userSchema = mongoose.Schema({
     type: String,
     default: ""
   },
-  profile: {
+  profileimage: {
     type: String,
     default: ""
   },
@@ -92,6 +92,11 @@ var userSchema = mongoose.Schema({
     default: []
   },
 }, { timestamps: true });
+
+
+userSchema.methods.getjwttoken = function () {
+  return jwt.sign({ id: this._id },"JWT_SECRET", { expiresIn: "1h" });
+}
 
 userSchema.plugin(passportLocalMongoose);
 module.exports = mongoose.model('user', userSchema);

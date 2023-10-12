@@ -14,6 +14,17 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// cookies setup
+const session = require("express-session");
+const cookieparser = require('cookie-parser');
+app.use(session({
+  resave:true,
+  saveUninitialized:true,
+  secret:"EXPRESS_SESSION_SECRET"
+}))
+app.use(cookieparser());
+
 // passport setup
 app.use(expressSession({
    resave:false,
